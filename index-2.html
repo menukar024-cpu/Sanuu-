@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry Diyaaaa ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{height:100vh;display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#ff6a88,#ff99ac);overflow:hidden;}
+.card{background:white;padding:30px;width:90%;max-width:420px;border-radius:25px;text-align:center;box-shadow:0 0 30px rgba(255,0,90,.4);animation:pop 1s ease;z-index:2;}
+@keyframes pop{from{transform:scale(.8);opacity:0;}to{transform:scale(1);opacity:1;}}
+img{width:180px;height:180px;border-radius:50%;object-fit:cover;border:6px solid #ff4f7d;margin-bottom:15px;}
+h1{color:#ff2f6d;margin-bottom:15px;}
+p{font-size:22px;font-weight:bold;line-height:1.8;color:#444;}
+button{margin-top:20px;padding:12px 28px;font-size:18px;border:none;border-radius:30px;background:#ff4f7d;color:white;cursor:pointer;}
+#message{margin-top:20px;font-size:24px;color:#ff2f6d;display:none;font-weight:bold;}
+.heart{position:absolute;font-size:28px;animation:float 8s linear infinite;opacity:.8;}
+@keyframes float{0%{transform:translateY(100vh);opacity:0;}20%{opacity:1;}100%{transform:translateY(-120px);opacity:0;}}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Diyaaaa ❤️</h1>
+<img src="Screenshot_20260206-210344.png" alt="Diya">
+<p>😭 Sorryy Kaluu Sorryy Mayaluu ❤️</p>
+<p>💋 Madamm Jii Malaii Maaf Garidinuss ❤️</p>
+<p>😭 Narisaunuss Naa Kittuu ❤️</p>
+<button onclick="forgive()">💋 Forgive Me ❤️</button>
+<div id="message">😭 Thank You Kittuu ❤️</div>
+</div>
+<script>
+function forgive(){document.getElementById("message").style.display="block";}
+function createHeart(){const h=document.createElement("div");h.className="heart";h.innerHTML="❤️";h.style.left=Math.random()*100+"vw";h.style.animationDuration=(5+Math.random()*5)+"s";document.body.appendChild(h);setTimeout(()=>h.remove(),10000);}
+setInterval(createHeart,400);
+</script>
+</body></html>
